@@ -2,6 +2,7 @@ package com.wang.controller;
 
 import com.wang.model.Girl;
 import com.wang.repository.GirlRepository;
+import com.wang.service.GirlService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -16,6 +17,9 @@ public class GirlController {
 
     @Autowired
     private GirlRepository girlRepository;
+
+    @Autowired
+    private GirlService girlService;
 
     @GetMapping(path = "getgirlbyname/{age}")
     public List<Girl> getGirlByAge(@PathVariable("age") Integer age){
@@ -48,6 +52,11 @@ public class GirlController {
     @DeleteMapping(path = "deletegirl")
     public void deleteGirl(Long id) {
         girlRepository.deleteById(id);
+    }
+
+    @RequestMapping(value = "inserttwo")
+    public void insertTwo() {
+        girlService.insertTwo();
     }
 
 }
