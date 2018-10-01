@@ -22,7 +22,7 @@ public class Girl {
 
     //    @NotNull
     @Column(name = "age", nullable = true, length = 4)
-    @Min(value = 18,message = "年龄需要大于18岁")
+    @Min(value = 6,message = "年龄需要大于6岁")
     private Integer age;
 
     public Long getId() {

@@ -25,7 +25,8 @@ public class GirlController {
     @Autowired
     private GirlService girlService;
 
-    @GetMapping(path = "getgirlbyname/{age}")
+    //通过年龄查询女生列表
+    @GetMapping(path = "getgirlbyage/{age}")
     public List<Girl> getGirlByAge(@PathVariable("age") Integer age){
         return girlRepository.findGirlByAge(age);
     }
@@ -92,5 +93,12 @@ public class GirlController {
     public void insertTwo() {
         girlService.insertTwo();
     }
+
+
+    @GetMapping(value = "getAge/{id}")
+    public void getAge(@PathVariable("id") Long id) throws Exception{
+        girlService.getAge(id);
+    }
+
 
 }

@@ -52,8 +52,12 @@ public class HttpAspect {
     }
 
     @AfterReturning(returning = "object", pointcut = "log()")
-    public void doAfterReturning(Object object) {
-        logger.info("response={}", object.toString());
+    public void doAfterReturning(Object object) {   //如果object为空，会抛出异常
+//        if(object==null) {
+//            logger.info("response={}", "null");
+//            return;
+//        }
+        logger.info("response={}", object);
     }
 
 }
