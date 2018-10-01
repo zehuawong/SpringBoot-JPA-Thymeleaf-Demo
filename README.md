@@ -1,4 +1,6 @@
-GitHub源码 https://github.com/zehuawong/SpringBoot-JPA-Thymeleaf-Demo
+CSDN文章
+https://blog.csdn.net/ZHWang102107/article/details/82916325
+
 ## 项目属性配置
 
 application.yml文件
