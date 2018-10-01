@@ -17,7 +17,7 @@ public class UserController {
 
     //@RequestMapping(value = "/list", method = RequestMethod.GET)或者
     @GetMapping("list")
-    public String listUser(Model model, @RequestParam(value = "id",required = false,defaultValue = "0") Integer id) {
+    public String listUser(Model model, @RequestParam(value = "id", required = false, defaultValue = "0") Integer id) {
         List<User> userList = new ArrayList<User>();
 
         for (int i = 0; i < 10; i++) {
@@ -28,12 +28,12 @@ public class UserController {
         }
 
         model.addAttribute("users", userList);
-        model.addAttribute("id",id);
+        model.addAttribute("id", id);
 
         return "user/list";
     }
 
- //    @RequestMapping(value = "/list/{id}", method = RequestMethod.GET)
+    //    @RequestMapping(value = "/list/{id}", method = RequestMethod.GET)
 //    public String getUserID(@PathVariable("id") Integer id) {
 //        return "id"+ id;
 //    }
