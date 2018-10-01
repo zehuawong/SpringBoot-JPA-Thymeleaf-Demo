@@ -47,7 +47,7 @@ public class GirlController {
      * @return
      */
     @GetMapping(path = "girllist")
-    public List<Girl> getGirl( ) {
+    public List<Girl> listAllGirl( ) {
 
         return girlRepository.findAll();
     }
