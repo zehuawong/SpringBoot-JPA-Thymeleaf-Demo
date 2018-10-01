@@ -29,10 +29,10 @@ public class HelloController {
     private GirlProperties girlProperties;
 
 
-    @RequestMapping(value = "/hello", method = RequestMethod.GET)
-    public String sayHi() {
-        return girlProperties.getCupSize();
-    }
+//    @RequestMapping(value = "hello", method = RequestMethod.GET)
+//    public String sayHi() {
+//        return girlProperties.getCupSize();
+//    }
 
     @RequestMapping(value = {"index", "hi"}, method = RequestMethod.GET)
     public String hello() {

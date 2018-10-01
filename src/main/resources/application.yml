@@ -11,7 +11,7 @@
     profiles:
       active: dev   #使用dev这个配置，区分生产环境和开发环境
 
-#thymelea模板配置
+    #thymelea模板配置
     thymeleaf:
       prefix: classpath:/templates/
       suffix: .html
@@ -33,7 +33,7 @@
       driver-class-name: com.mysql.jdbc.Driver
       url: jdbc:mysql://127.0.0.1:3306/dbgirl?useSSL=true&useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true
       username: root
-      password: 123456
+      password: 19952015
 
     #jpa配置
     jpa:

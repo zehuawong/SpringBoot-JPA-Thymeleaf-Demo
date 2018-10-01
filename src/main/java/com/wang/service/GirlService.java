@@ -1,6 +1,6 @@
 package com.wang.service;
 
-import com.wang.model.Girl;
+import com.wang.domain.Girl;
 import com.wang.repository.GirlRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

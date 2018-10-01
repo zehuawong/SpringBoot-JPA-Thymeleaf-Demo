@@ -1,6 +1,6 @@
 package com.wang.repository;
 
-import com.wang.model.Girl;
+import com.wang.domain.Girl;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

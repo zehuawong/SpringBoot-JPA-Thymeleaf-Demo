@@ -1,6 +1,6 @@
 package com.wang.controller;
 
-import com.wang.model.User;
+import com.wang.domain.User;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;

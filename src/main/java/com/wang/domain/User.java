@@ -1,4 +1,4 @@
-package com.wang.model;
+package com.wang.domain;
 
 /**
  * Created by wzh-zhua on 2018/10/1.

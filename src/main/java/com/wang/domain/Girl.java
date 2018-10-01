@@ -1,7 +1,9 @@
-package com.wang.model;
+package com.wang.domain;
 
 
 import javax.persistence.*;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotBlank;
 
 
 /**
@@ -15,9 +17,12 @@ public class Girl {
     private Long id;
 
     @Column(name = "name", nullable = true, length = 20)
+    @NotBlank(message = "这个字段必传")
     private String name;
 
+    //    @NotNull
     @Column(name = "age", nullable = true, length = 4)
+    @Min(value = 18,message = "年龄需要大于18岁")
     private Integer age;
 
     public Long getId() {
