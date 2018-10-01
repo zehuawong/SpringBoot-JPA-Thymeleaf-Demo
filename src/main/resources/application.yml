@@ -1,0 +1,46 @@
+
+#cupSize: CD
+#age: 18
+#content: "cupSize: ${cupSize},age: ${age}"  #在当前配置里面再使用配置
+#
+#girl:
+#  cupSize: C
+#  age: 20
+
+  spring:
+    profiles:
+      active: dev   #使用dev这个配置，区分生产环境和开发环境
+
+#thymelea模板配置
+    thymeleaf:
+      prefix: classpath:/templates/
+      suffix: .html
+      mode: HTML5
+      encoding: UTF-8
+      servlet:
+        content-type: text/html
+      cache: false    #开发阶段务必关闭缓存
+
+    resources:
+      chain:
+        strategy:
+          content:
+            enabled: true
+            paths: /**
+
+    #数据库配置
+    datasource:
+      driver-class-name: com.mysql.jdbc.Driver
+      url: jdbc:mysql://127.0.0.1:3306/dbgirl?useSSL=true&useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true
+      username: root
+      password: 19952015
+
+    #jpa配置
+    jpa:
+      hibernate:
+        ddl-auto: update
+      show-sql: true
+
+
+
+

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello Spring</title>
+</head>
+<body>
+
+<span th:text="'参数中的用户id为'+${id}"></span>
+
+<h2>用户列表</h2>
+<div>
+    <ul>
+        <li th:each="user:${users}">
+            <p>ID:<span th:text="${user.id}"></span></p>
+            <p>名字:<span th:text="${user.username}"></span></p>
+
+        </li>
+    </ul>
+</div>
+
+
+</body>
+</html>
